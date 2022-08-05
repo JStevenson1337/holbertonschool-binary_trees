@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/jeremy/Projects/Holberton/holbertonschool-binary_trees/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+_height	binary_tree_print.c	/^static size_t _height(const binary_tree_t *tree)$/;"	f	typeref:typename:size_t	file:
+binary_tree_node	0-binary_tree_node.c	/^binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)$/;"	f	typeref:typename:binary_tree_t *
+binary_tree_print	binary_tree_print.c	/^void binary_tree_print(const binary_tree_t *tree)$/;"	f	typeref:typename:void
+print_t	binary_tree_print.c	/^static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)$/;"	f	typeref:typename:int	file:
