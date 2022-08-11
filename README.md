@@ -1101,5 +1101,418 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 18-binary_tree_uncle.c
+
+
+
+
+
+
+0x08. Binary Trees 1
+ Novice
+ By: HBTN
+ Weight: 1
+ Project will start Aug 8, 2022 12:00 AM, must end by Aug 12, 2022 12:00 AM
+ was released at Aug 8, 2022 12:00 AM
+ An auto review will be launched at the deadline
+Resources
+Read or watch:
+
+Binary tree (note the first line: Not to be confused with B-tree.)
+Binary Search Tree
+Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
+General
+What is a binary search tree
+What is the difference between a binary tree and a Binary Search Tree
+Requirements
+General
+Allowed editors: vi, vim, emacs
+All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+All your files should end with a new line
+A README.md file, at the root of the folder of the project, is mandatory
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+You are not allowed to use global variables
+No more than 5 functions per file
+You are allowed to use the standard library
+In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+The prototypes of all your functions should be included in your header file called binary_trees.h
+Don’t forget to push your header file
+All your header files should be include guarded
+More Info
+Data structures
+Please use the following data structures and types for binary trees. Don’t forget to include them in your header file.
+
+Basic Binary Tree
+/**
+ * struct binary_tree_s - Binary tree node
+ *
+ * @n: Integer stored in the node
+ * @parent: Pointer to the parent node
+ * @left: Pointer to the left child node
+ * @right: Pointer to the right child node
+ */
+struct binary_tree_s
+{
+    int n;
+    struct binary_tree_s *parent;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
+};
+
+typedef struct binary_tree_s binary_tree_t;
+Binary Search Tree
+typedef struct binary_tree_s bst_t;
+Print function
+To match the examples in the tasks, you are given this function
+
+This function is used only for visualization purposes. You don’t have to push it to your repo. It may not be used during the correction
+
+Tasks
+0. Is BST
+mandatory
+Write a function that checks if a binary tree is a valid Binary Search Tree
+
+Prototype: int binary_tree_is_bst(const binary_tree_t *tree);
+Where tree is a pointer to the root node of the tree to check
+Your function must return 1 if tree is a valid BST, and 0 otherwise
+If tree is NULL, return 0
+Properties of a Binary Search Tree:
+
+The left subtree of a node contains only nodes with values less than the node’s value
+The right subtree of a node contains only nodes with values greater than the node’s value
+The left and right subtree each must also be a binary search tree
+There must be no duplicate values
+alex@/tmp/binary_trees$ cat 110-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    binary_tree_t *root;
+    int bst;
+
+    root = binary_tree_node(NULL, 98);
+    root->left = binary_tree_node(root, 12);
+    root->right = binary_tree_node(root, 128);
+    root->left->right = binary_tree_node(root->left, 54);
+    root->right->right = binary_tree_node(root, 402);
+    root->left->left = binary_tree_node(root->left, 10);
+
+    binary_tree_print(root);
+    bst = binary_tree_is_bst(root);
+    printf("Is %d bst: %d\n", root->n, bst);
+    bst = binary_tree_is_bst(root->left);
+    printf("Is %d bst: %d\n", root->left->n, bst);
+
+    root->right->left = binary_tree_node(root->right, 97);
+    binary_tree_print(root);
+    bst = binary_tree_is_bst(root);
+    printf("Is %d bst: %d\n", root->n, bst);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 110-main.c 110-binary_tree_is_bst.c 0-binary_tree_node.c -o 110-is_bst
+alex@/tmp/binary_trees$ ./110-is_bst
+       .-------(098)--.
+  .--(012)--.       (128)--.
+(010)     (054)          (402)
+Is 98 bst: 1
+Is 12 bst: 1
+       .-------(098)-------.
+  .--(012)--.         .--(128)--.
+(010)     (054)     (097)     (402)
+Is 98 bst: 0
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 110-binary_tree_is_bst.c
    
+1. BST - Insert
+mandatory
+Write a function that inserts a value in a Binary Search Tree
+
+Prototype: bst_t *bst_insert(bst_t **tree, int value);
+Where tree is a double pointer to the root node of the BST to insert the value
+And value is the value to store in the node to be inserted
+Your function must return a pointer to the created node, or NULL on failure
+If the address stored in tree is NULL, the created node must become the root node.
+If the value is already present in the tree, it must be ignored
+Your file 0-binary_tree_node.c will be compile during the correction
+
+alex@/tmp/binary_trees$ cat 111-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    bst_t *root;
+    bst_t *node;
+
+    root = NULL;
+    node = bst_insert(&root, 98);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 402);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 12);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 46);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 128);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 256);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 512);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 1);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 128);
+    printf("Node should be nil -> %p\n", (void *)node);
+    binary_tree_print(root);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 111-bst_insert.c 111-main.c 0-binary_tree_node.c -o 111-bst_insert
+alex@/tmp/binary_trees$ ./111-bst_insert
+Inserted: 98
+Inserted: 402
+Inserted: 12
+Inserted: 46
+Inserted: 128
+Inserted: 256
+Inserted: 512
+Inserted: 1
+Node should be nil -> (nil)
+       .-------(098)------------.
+  .--(012)--.         .-------(402)--.
+(001)     (046)     (128)--.       (512)
+                         (256)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 111-bst_insert.c, 0-binary_tree_node.c
+   
+2. BST - Array to BST
+mandatory
+Write a function that builds a Binary Search Tree from an array
+
+Prototype: bst_t *array_to_bst(int *array, size_t size);
+Where array is a pointer to the first element of the array to be converted
+And size is the number of element in the array
+Your function must return a pointer to the root node of the created BST, or NULL on failure
+If a value of the array is already present in the tree, this value must be ignored
+Your files 111-bst_insert.c and 0-binary_tree_node.c will be compiled during the correction
+
+alex@/tmp/binary_trees$ cat 112-main.c 
+#include <stdlib.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code on failure
+ */
+int main(void)
+{
+    bst_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
+
+    tree = array_to_bst(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 112-array_to_bst.c 112-main.c 111-bst_insert.c 0-binary_tree_node.c -o 112-bst_array
+alex@/tmp/binary_trees$ ./112-bst_array
+                                     .------------(079)-------.
+                 .-----------------(047)-------.         .--(087)--.
+       .-------(021)-------.              .--(068)     (084)     (091)-------.
+  .--(002)--.         .--(032)--.       (062)                           .--(098)
+(001)     (020)     (022)     (034)                                   (095)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 112-array_to_bst.c, 111-bst_insert.c, 0-binary_tree_node.c
+   
+3. BST - Search
+mandatory
+Write a function that searches for a value in a Binary Search Tree
+
+Prototype: bst_t *bst_search(const bst_t *tree, int value);
+Where tree is a pointer to the root node of the BST to search
+And value is the value to search in the tree
+Your function must return a pointer to the node containing a value equals to value
+If tree is NULL or if nothing is found, your function must return NULL
+alex@/tmp/binary_trees$ cat 113-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code on failure
+ */
+int main(void)
+{
+    bst_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
+    bst_t *node;
+
+    tree = array_to_bst(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
+    node = bst_search(tree, 32);
+    printf("Found: %d\n", node->n);
+    binary_tree_print(node);
+    node = bst_search(tree, 512);
+    printf("Node should be nil -> %p\n", (void *)node);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 113-bst_search.c 113-main.c 112-array_to_bst.c 111-bst_insert.c 0-binary_tree_node.c -o 113-bst_search
+alex@/tmp/binary_trees$ ./113-bst_search 
+                                     .------------(079)-------.
+                 .-----------------(047)-------.         .--(087)--.
+       .-------(021)-------.              .--(068)     (084)     (091)-------.
+  .--(002)--.         .--(032)--.       (062)                           .--(098)
+(001)     (020)     (022)     (034)                                   (095)
+Found: 32
+  .--(032)--.
+(022)     (034)
+Node should be nil -> (nil)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 113-bst_search.c
+   
+4. BST - Remove
+mandatory
+Write a function that removes a node from a Binary Search Tree
+
+Prototype: bst_t *bst_remove(bst_t *root, int value);
+Where root is a pointer to the root node of the tree where you will remove a node
+And value is the value to remove in the tree
+Once located, the node containing a value equals to value must be removed and freed
+If the node to be deleted has two children, it must be replaced with its first in-order successor (not predecessor)
+Your function must return a pointer to the new root node of the tree after removing the desired value
+alex@/tmp/binary_trees$ cat 114-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code on failure
+ */
+int main(void)
+{
+    bst_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
+
+    tree = array_to_bst(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
+
+    tree = bst_remove(tree, 79);
+    printf("Removed 79...\n");
+    binary_tree_print(tree);
+
+    tree = bst_remove(tree, 21);
+    printf("Removed 21...\n");
+    binary_tree_print(tree);
+
+    tree = bst_remove(tree, 68);
+    printf("Removed 68...\n");
+    binary_tree_print(tree);
+    binary_tree_delete(tree);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 114-bst_remove.c 114-main.c 112-array_to_bst.c 111-bst_insert.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 114-bst_rm
+alex@/tmp/binary_trees$ valgrind ./114-bst_rm
+==14720== Memcheck, a memory error detector
+==14720== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==14720== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==14720== Command: ./114-bst_rm
+==14720== 
+                                     .------------(079)-------.
+                 .-----------------(047)-------.         .--(087)--.
+       .-------(021)-------.              .--(068)     (084)     (091)-------.
+  .--(002)--.         .--(032)--.       (062)                           .--(098)
+(001)     (020)     (022)     (034)                                   (095)
+Removed 79...
+                                     .------------(084)--.
+                 .-----------------(047)-------.       (087)--.
+       .-------(021)-------.              .--(068)          (091)-------.
+  .--(002)--.         .--(032)--.       (062)                      .--(098)
+(001)     (020)     (022)     (034)                              (095)
+Removed 21...
+                                .------------(084)--.
+                 .------------(047)-------.       (087)--.
+       .-------(022)--.              .--(068)          (091)-------.
+  .--(002)--.       (032)--.       (062)                      .--(098)
+(001)     (020)          (034)                              (095)
+Removed 68...
+                                .-------(084)--.
+                 .------------(047)--.       (087)--.
+       .-------(022)--.            (062)          (091)-------.
+  .--(002)--.       (032)--.                             .--(098)
+(001)     (020)          (034)                         (095)
+==14720== 
+==14720== HEAP SUMMARY:
+==14720==     in use at exit: 0 bytes in 0 blocks
+==14720==   total heap usage: 40 allocs, 40 frees, 5,772 bytes allocated
+==14720== 
+==14720== All heap blocks were freed -- no leaks are possible
+==14720== 
+==14720== For counts of detected and suppressed errors, rerun with: -v
+==14720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 114-bst_remove.c
+   
+5. Big O #BST
+mandatory
+What are the average time complexities of those operations on a Binary Search Tree (one answer per line):
+
+Inserting the value n
+Removing the node with the value n
+Searching for a node in a BST of size n
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 115-O
+   
+Copyright © 2022 Holberton Inc, All rights reserved.
 
