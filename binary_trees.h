@@ -26,7 +26,7 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 
-
+typedef struct binary_tree_s bst_t;
 
 /* Prototypes */
 
@@ -53,5 +53,10 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 /* Print Prototype */
 void binary_tree_print(const binary_tree_t *);
+
+/* Binary Search Trees */
+int binary_tree_is_bst_rec(const binary_tree_t *tree, int min, int max);
+int binary_tree_is_bst(const binary_tree_t *tree);
+
 
 #endif /* __BINARY_TREES_H__ */
