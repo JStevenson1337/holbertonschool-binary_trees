@@ -1,10 +1,16 @@
+
+You just released the optional tasks of this project. Have fun!
 0x07. Binary Trees 0
  Novice
  By: HBTN
  Weight: 1
- Project will start Aug 1, 2022 12:00 AM, must end by Aug 5, 2022 12:00 AM
- was released at Aug 1, 2022 12:00 AM
+ Project over - took place from Oct 31, 2022 12:00 AM to Nov 4, 2022 12:00 AM
  An auto review will be launched at the deadline
+In a nutshell…
+Auto QA review: 139.0/157 mandatory
+Altogether:  88.54%
+Mandatory: 88.54%
+Calculation:  88.54%  == 88.54%
 Resources
 Read or watch:
 
@@ -65,6 +71,7 @@ This function is used only for visualization purposes. You don’t have to push 
 Tasks
 0. New node
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that creates a binary tree node
 
 Prototype: binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -108,9 +115,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 0-binary_tree_node.c
-   
+    
 1. Insert left
 mandatory
+
 Write a function that inserts a node as the left-child of another node
 
 Prototype: binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
@@ -155,9 +163,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 1-binary_tree_insert_left.c
-   
+     
 2. Insert right
 mandatory
+Score: 85.71% (Checks completed: 85.71%)
 Write a function that inserts a node as the right-child of another node
 
 Prototype: binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
@@ -202,9 +211,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 2-binary_tree_insert_right.c
-   
+     
 3. Delete
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that deletes an entire binary tree
 
 Prototype: void binary_tree_delete(binary_tree_t *tree);
@@ -257,9 +267,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 3-binary_tree_delete.c
-   
+    
 4. Is leaf
 mandatory
+Score: 71.43% (Checks completed: 71.43%)
 Write a function that checks if a node is a leaf
 
 Prototype: int binary_tree_is_leaf(const binary_tree_t *node);
@@ -309,9 +320,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 4-binary_tree_is_leaf.c
-   
+     
 5. Is root
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that checks if a given node is a root
 
 Prototype: int binary_tree_is_root(const binary_tree_t *node);
@@ -361,9 +373,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 5-binary_tree_is_root.c
-   
+    
 6. Pre-order traversal
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that goes through a binary tree using pre-order traversal
 
 Prototype: void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
@@ -423,9 +436,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 6-binary_tree_preorder.c
-   
+    
 7. In-order traversal
 mandatory
+Score: 25.00% (Checks completed: 25.00%)
 Write a function that goes through a binary tree using in-order traversal
 
 Prototype: void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
@@ -485,9 +499,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 7-binary_tree_inorder.c
-   
+     
 8. Post-order traversal
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that goes through a binary tree using post-order traversal
 
 Prototype: void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
@@ -547,9 +562,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 8-binary_tree_postorder.c
-   
+    
 9. Height
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that measures the height of a binary tree
 
 Prototype: size_t binary_tree_height(const binary_tree_t *tree);
@@ -598,9 +614,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 9-binary_tree_height.c
-   
+    
 10. Depth
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that measures the depth of a node in a binary tree
 
 Prototype: size_t binary_tree_depth(const binary_tree_t *tree);
@@ -649,9 +666,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 10-binary_tree_depth.c
-   
+    
 11. Size
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that measures the size of a binary tree
 
 Prototype: size_t binary_tree_size(const binary_tree_t *tree);
@@ -700,9 +718,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 11-binary_tree_size.c
-   
+    
 12. Leaves
 mandatory
+Score: 0.00% (Checks completed: 0.00%)
 Write a function that counts the leaves in a binary tree
 
 Prototype: size_t binary_tree_leaves(const binary_tree_t *tree);
@@ -752,9 +771,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 12-binary_tree_leaves.c
-   
+     
 13. Nodes
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that counts the nodes with at least 1 child in a binary tree
 
 Prototype: size_t binary_tree_nodes(const binary_tree_t *tree);
@@ -804,9 +824,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 13-binary_tree_nodes.c
-   
+    
 14. Balance factor
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that measures the balance factor of a binary tree
 
 Prototype: int binary_tree_balance(const binary_tree_t *tree);
@@ -861,9 +882,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 14-binary_tree_balance.c
-   
+    
 15. Is full
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that checks if a binary tree is full
 
 Prototype: int binary_tree_is_full(const binary_tree_t *tree);
@@ -913,9 +935,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 15-binary_tree_is_full.c
-   
+    
 16. Is perfect
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that checks if a binary tree is perfect
 
 Prototype: int binary_tree_is_perfect(const binary_tree_t *tree);
@@ -982,9 +1005,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 16-binary_tree_is_perfect.c
-   
+    
 17. Sibling
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that finds the sibling of a node
 
 Prototype: binary_tree_t *binary_tree_sibling(binary_tree_t *node);
@@ -1043,9 +1067,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 17-binary_tree_sibling.c
-   
+    
 18. Uncle
 mandatory
+Score: 100.00% (Checks completed: 100.00%)
 Write a function that finds the uncle of a node
 
 Prototype: binary_tree_t *binary_tree_uncle(binary_tree_t *node);
@@ -1101,19 +1126,372 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 18-binary_tree_uncle.c
+    
+19. Lowest common ancestor
+#advanced
+Score: 0.00% (Checks completed: 0.00%)
+Write a function that finds the lowest common ancestor of two nodes
 
+Prototype: binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+Where first is a pointer to the first node
+And second is a pointer to the second node
+Your function must return a pointer to the lowest common ancestor node of the two given nodes
+If no common ancestor was found, your function must return NULL
+alex@/tmp/binary_trees$ cat 100-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
 
+/**
+ * launch_test - Test ancestor function and print informations
+ *
+ * @n1: First node
+ * @n2: Second node
+ */
+void launch_test(binary_tree_t *n1, binary_tree_t *n2)
+{
+    binary_tree_t *ancestor;
 
+    ancestor = binary_trees_ancestor(n1, n2);
+    printf("Ancestor of [%d] & [%d]: ", n1->n, n2->n);
+    if (!ancestor)
+        printf("(nil)\n");
+    else
+        printf("%d\n", ancestor->n);
+}
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    binary_tree_t *root;
+
+    root = binary_tree_node(NULL, 98);
+    root->left = binary_tree_node(root, 12);
+    root->right = binary_tree_node(root, 402);
+    root->left->right = binary_tree_node(root->left, 54);
+    root->right->right = binary_tree_node(root->right, 128);
+    root->left->left = binary_tree_node(root->left, 10);
+    root->right->left = binary_tree_node(root->right, 45);
+    root->right->right->left = binary_tree_node(root->right->right, 92);
+    root->right->right->right = binary_tree_node(root->right->right, 65);
+    binary_tree_print(root);
+
+    launch_test(root->left, root->right);
+    launch_test(root->right->left, root->right->right->right);
+    launch_test(root->right->right, root->right->right->right);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 100-main.c 100-binary_trees_ancestor.c 0-binary_tree_node.c -o 100-ancestor
+alex@/tmp/binary_trees$ ./100-ancestor
+       .-------(098)-------.
+  .--(012)--.         .--(402)-------.
+(010)     (054)     (045)       .--(128)--.
+                              (092)     (065)
+Ancestor of [12] & [402]: 98
+Ancestor of [45] & [65]: 402
+Ancestor of [128] & [65]: 128
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 100-binary_trees_ancestor.c
+     
+20. Level-order traversal
+#advanced
+Score: 0.00% (Checks completed: 0.00%)
+Write a function that goes through a binary tree using level-order traversal
+
+Prototype: void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+Where tree is a pointer to the root node of the tree to traverse
+And func is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
+If tree or func is NULL, do nothing
+alex@/tmp/binary_trees$ cat 101-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * print_num - Prints a number
+ *
+ * @n: Number to be printed
+ */
+void print_num(int n)
+{
+    printf("%d\n", n);
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    binary_tree_t *root;
+
+    root = binary_tree_node(NULL, 98);
+    root->left = binary_tree_node(root, 12);
+    root->right = binary_tree_node(root, 402);
+    root->left->left = binary_tree_node(root->left, 6);
+    root->left->right = binary_tree_node(root->left, 56);
+    root->right->left = binary_tree_node(root->right, 256);
+    root->right->right = binary_tree_node(root->right, 512);
+
+    binary_tree_print(root);
+    binary_tree_levelorder(root, &print_num);
+    binary_tree_delete(root);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 101-main.c 101-binary_tree_levelorder.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 101-lvl
+alex@/tmp/binary_trees$ valgrind ./101-lvl
+==23445== Memcheck, a memory error detector
+==23445== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==23445== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==23445== Command: ./101-lvl
+==23445== 
+       .-------(098)-------.
+  .--(012)--.         .--(402)--.
+(006)     (056)     (256)     (512)
+98
+12
+402
+6
+56
+256
+512
+==23445== 
+==23445== HEAP SUMMARY:
+==23445==     in use at exit: 0 bytes in 0 blocks
+==23445==   total heap usage: 19 allocs, 19 frees, 1,197 bytes allocated
+==23445== 
+==23445== All heap blocks were freed -- no leaks are possible
+==23445== 
+==23445== For counts of detected and suppressed errors, rerun with: -v
+==23445== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 101-binary_tree_levelorder.c
+     
+21. Is complete
+#advanced
+Score: 0.00% (Checks completed: 0.00%)
+Write a function that checks if a binary tree is complete
+
+Prototype: int binary_tree_is_complete(const binary_tree_t *tree);
+Where tree is a pointer to the root node of the tree to check
+If tree is NULL, your function must return 0
+alex@/tmp/binary_trees$ cat 102-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    binary_tree_t *root;
+    int complete;
+
+    root = binary_tree_node(NULL, 98);
+    root->left = binary_tree_node(root, 12);
+    root->right = binary_tree_node(root, 128);
+    root->left->right = binary_tree_node(root->left, 54);
+    root->right->right = binary_tree_node(root, 402);
+    root->left->left = binary_tree_node(root->left, 10);
+
+    binary_tree_print(root);
+    complete = binary_tree_is_complete(root);
+    printf("Is %d complete: %d\n", root->n, complete);
+    complete = binary_tree_is_complete(root->left);
+    printf("Is %d complete: %d\n", root->left->n, complete);
+
+    root->right->left = binary_tree_node(root->right, 112);
+    binary_tree_print(root);
+    complete = binary_tree_is_complete(root);
+    printf("Is %d complete: %d\n", root->n, complete);
+
+    root->left->left->left = binary_tree_node(root->left->left, 8);
+    binary_tree_print(root);
+    complete = binary_tree_is_complete(root);
+    printf("Is %d complete: %d\n", root->n, complete);
+
+    root->left->right->left = binary_tree_node(root->left->right, 23);
+    binary_tree_print(root);
+    complete = binary_tree_is_complete(root);
+    printf("Is %d complete: %d\n", root->n, complete);
+
+    binary_tree_delete(root);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 102-main.c 102-binary_tree_is_complete.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 102-complete
+alex@/tmp/binary_trees$ ./102-complete
+       .-------(098)--.
+  .--(012)--.       (128)--.
+(010)     (054)          (402)
+Is 98 complete: 0
+Is 12 complete: 1
+       .-------(098)-------.
+  .--(012)--.         .--(128)--.
+(010)     (054)     (112)     (402)
+Is 98 complete: 1
+            .-------(098)-------.
+       .--(012)--.         .--(128)--.
+  .--(010)     (054)     (112)     (402)
+(008)
+Is 98 complete: 1
+            .------------(098)-------.
+       .--(012)-------.         .--(128)--.
+  .--(010)       .--(054)     (112)     (402)
+(008)          (023)
+Is 98 complete: 0
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 102-binary_tree_is_complete.c
+     
+22. Rotate left
+#advanced
+Score: 0.00% (Checks completed: 0.00%)
+Write a function that performs a left-rotation on a binary tree
+
+Prototype: binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+Where tree is a pointer to the root node of the tree to rotate
+Your function must return a pointer to the new root node of the tree once rotated
+alex@/tmp/binary_trees$ cat 103-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code on failure
+ */
+int main(void)
+{
+    binary_tree_t *root;
+
+    root = binary_tree_node(NULL, 98);
+    root->right = binary_tree_node(root, 128);
+    root->right->right = binary_tree_node(root->right, 402);
+    binary_tree_print(root);
+    printf("Rotate-left %d\n", root->n);
+    root = binary_tree_rotate_left(root);
+    binary_tree_print(root);
+    printf("\n");
+
+    root->right->right = binary_tree_node(root->right, 450);
+    root->right->left = binary_tree_node(root->right, 420);
+    binary_tree_print(root);
+    printf("Rotate-left %d\n", root->n);
+    root = binary_tree_rotate_left(root);
+    binary_tree_print(root);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 103-binary_tree_rotate_left.c 103-main.c 0-binary_tree_node.c -o 103-rotl
+alex@/tmp/binary_trees$ ./103-rotl
+(098)--.
+     (128)--.
+          (402)
+Rotate-left 98
+  .--(128)--.
+(098)     (402)
+
+  .--(128)-------.
+(098)       .--(402)--.
+          (420)     (450)
+Rotate-left 128
+       .-------(402)--.
+  .--(128)--.       (450)
+(098)     (420)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 103-binary_tree_rotate_left.c
+     
+23. Rotate right
+#advanced
+Score: 0.00% (Checks completed: 0.00%)
+Write a function that performs a right-rotation on a binary tree
+
+Prototype: binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+Where tree is a pointer to the root node of the tree to rotate
+Your function must return a pointer to the new root node of the tree once rotated
+alex@/tmp/binary_trees$ cat 104-main.c
+#include <stdlib.h>
+#include <stdio.h>
+#include "binary_trees.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code on failure
+ */
+int main(void)
+{
+    binary_tree_t *root;
+
+    root = binary_tree_node(NULL, 98);
+    root->left = binary_tree_node(root, 64);
+    root->left->left = binary_tree_node(root->left, 32);
+    binary_tree_print(root);
+    printf("Rotate-right %d\n", root->n);
+    root = binary_tree_rotate_right(root);
+    binary_tree_print(root);
+    printf("\n");
+
+    root->left->left = binary_tree_node(root->left, 20);
+    root->left->right = binary_tree_node(root->left, 56);
+    binary_tree_print(root);
+    printf("Rotate-right %d\n", root->n);
+    root = binary_tree_rotate_right(root);
+    binary_tree_print(root);
+    return (0);
+}
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 104-binary_tree_rotate_right.c 104-main.c 0-binary_tree_node.c -o 104-rotr
+alex@/tmp/binary_trees$ ./104-rotr
+       .--(098)
+  .--(064)
+(032)
+Rotate-right 98
+  .--(064)--.
+(032)     (098)
+
+       .-------(064)--.
+  .--(032)--.       (098)
+(020)     (056)
+Rotate-right 64
+  .--(032)-------.
+(020)       .--(064)--.
+          (056)     (098)
+alex@/tmp/binary_trees$
+Repo:
+
+GitHub repository: holbertonschool-binary_trees
+File: 104-binary_tree_rotate_right.c
 
 
 0x08. Binary Trees 1
  Novice
  By: HBTN
  Weight: 1
- Project will start Aug 8, 2022 12:00 AM, must end by Aug 12, 2022 12:00 AM
- was released at Aug 8, 2022 12:00 AM
+ Ongoing second chance project - started Nov 14, 2022 12:00 AM, must end by Nov 19, 2022 12:00 AM
  An auto review will be launched at the deadline
+In a nutshell…
+Auto QA review: 4.0/45 mandatory
+Altogether:  8.89%
+Mandatory: 8.89%
 Resources
 Read or watch:
 
@@ -1171,6 +1549,7 @@ This function is used only for visualization purposes. You don’t have to push 
 Tasks
 0. Is BST
 mandatory
+Score: 36.36% (Checks completed: 36.36%)
 Write a function that checks if a binary tree is a valid Binary Search Tree
 
 Prototype: int binary_tree_is_bst(const binary_tree_t *tree);
@@ -1233,9 +1612,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 110-binary_tree_is_bst.c
-   
+    
 1. BST - Insert
 mandatory
+Score: 0.00% (Checks completed: 0.00%)
 Write a function that inserts a value in a Binary Search Tree
 
 Prototype: bst_t *bst_insert(bst_t **tree, int value);
@@ -1303,9 +1683,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 111-bst_insert.c, 0-binary_tree_node.c
-   
+    
 2. BST - Array to BST
 mandatory
+Score: 0.00% (Checks completed: 0.00%)
 Write a function that builds a Binary Search Tree from an array
 
 Prototype: bst_t *array_to_bst(int *array, size_t size);
@@ -1351,9 +1732,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 112-array_to_bst.c, 111-bst_insert.c, 0-binary_tree_node.c
-   
+    
 3. BST - Search
 mandatory
+Score: 0.00% (Checks completed: 0.00%)
 Write a function that searches for a value in a Binary Search Tree
 
 Prototype: bst_t *bst_search(const bst_t *tree, int value);
@@ -1408,9 +1790,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 113-bst_search.c
-   
+    
 4. BST - Remove
 mandatory
+Score: 0.00% (Checks completed: 0.00%)
 Write a function that removes a node from a Binary Search Tree
 
 Prototype: bst_t *bst_remove(bst_t *root, int value);
@@ -1501,9 +1884,10 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 114-bst_remove.c
-   
+    
 5. Big O #BST
 mandatory
+Score: 0.00% (Checks completed: 0.00%)
 What are the average time complexities of those operations on a Binary Search Tree (one answer per line):
 
 Inserting the value n
@@ -1513,6 +1897,5 @@ Repo:
 
 GitHub repository: holbertonschool-binary_trees
 File: 115-O
-   
+    
 Copyright © 2022 Holberton Inc, All rights reserved.
-
