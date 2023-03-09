@@ -7,22 +7,37 @@
   */
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 {
-	binary_tree_t *node;
-	int x = 0;
+
+	binary_tree_t *node, *temp;
 
 	if (!tree)
 	{
-		return (NULL);
+		return(NULL);
 	}
-	/* root of parent == NULL */
-	if (node->next != '\0')
+	if (tree -> right == NULL)
 	{
-		if (node->left->left == NULL)
-		{
-			node->right = node->left->left;
-			printf("%i", node -> n);
-		}
-		
+		return (tree);
 	}
-	return (tree);
+
+	node = tree -> right;
+	node -> parent = tree -> parent;
+	tree -> right = NULL;
+
+	if (node -> left == NULL)
+	{
+		node -> left = tree;
+		tree -> parent = node;
+		return (node);
+	}
+
+	temp = node -> left;
+	node -> left = tree;
+	tree -> parent = node;
+	tree -> right = temp;
+	temp -> parent = tree;
+
+
+
+	return (node);
+
 }
